@@ -5,3 +5,8 @@ services:
     ports:
       - "8177:8000"
     restart: unless-stopped
+    volumes:
+      - app-data:/app/data
+
+volumes:
+  app-data:

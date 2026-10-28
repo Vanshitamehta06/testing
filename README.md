@@ -62,3 +62,8 @@ This is the same address Intent2Deploy's staging preview uses for this project (
 
 CI builds this image and checks the running container on every pull request and after each merge
 into `staging` and `main` (`.github/workflows/docker.yml`).
+
+## Database
+
+Data is saved in SQLite at `DATABASE_PATH` (default `data/app.db`), so it survives restarts.
+With Docker Compose it is kept in the `app-data` volume. Back it up by copying the file while the app is stopped.
