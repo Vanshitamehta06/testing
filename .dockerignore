@@ -12,3 +12,4 @@ tests
 *.log
 .env
 .env.*
+data/

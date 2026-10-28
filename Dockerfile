@@ -13,6 +13,7 @@ COPY . .
 
 # Run as an unprivileged user.
 RUN useradd --create-home --uid 1000 appuser
+RUN mkdir -p /app/data && chown appuser /app/data
 USER appuser
 
 EXPOSE 8000
